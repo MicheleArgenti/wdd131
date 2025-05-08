@@ -32,6 +32,10 @@ nav a {
     font-weight: 700;
 }
 
+nav a:hover {
+    background-color: #222222;
+}
+
 /*End header*/
 
 /*Start main*/
@@ -41,6 +45,7 @@ main {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 20px;
+    max-width: fit-content;
 }
 
 .card:first-child {
