@@ -31,7 +31,7 @@ nav a {
     font-weight: 700;
 }
 
-/*Finish header*/
+/*End header*/
 
 /*Start main*/
 
@@ -43,12 +43,21 @@ main {
 }
 
 .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "title title"
+        "text1 img1"
+        "subtitle subtitle"
+        "img2 text2";
     border: 1px solid black;
     margin: 0.5rem;
     border-radius: 10px;
 }
 
 .card h2 {
+    grid-area: title;
     background-color: #1D4D72;
     text-align: center;
     color: white;
@@ -58,7 +67,20 @@ main {
     border-top-left-radius: 10px;
 }
 
-/*Finish main*/
+.card img {
+    width: 150px;
+    height: auto;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 0.5rem;
+    margin-right: 40%;
+    margin-left: 40%;
+    border-bottom: 1px solid black;
+}
+
+/*End main*/
 
 /*Start footer*/
 
@@ -72,4 +94,4 @@ footer p {
     padding: 0.5rem;
 }
 
-/*Finish footer*/
+/*End footer*/
