@@ -80,11 +80,6 @@ main {
     grid-area: text2;
 }
 
-.card:last-child {
-    display: flex;
-    flex-direction: column;
-}
-
 .card {
     border: 1px solid black;
     margin: 0.5rem;
