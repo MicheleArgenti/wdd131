@@ -13,7 +13,7 @@ function populate() {
     document.getElementById('weather').innerHTML = `
     <div class="title">
         <h2>Weather</h2>
-        <img src="images/sun.webp" alt="Sun">
+        <img src="images/sun.svg" alt="Sun">
     </div>
     <b>Temperature: </b><span>30° C</span>
     <b>Conditions: </b><span>Sunny</span>
