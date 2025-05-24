@@ -121,4 +121,14 @@ footer p {
         max-width: 300px;
         background-color: var(--card-background);
     }
+
+    .data h2::after,
+    .weather .title h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #e74c3c;
+        margin-top: 8px;
+    }
 }
