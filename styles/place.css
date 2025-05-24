@@ -1,12 +1,18 @@
+:root {
+    --primary-color: #D21034;
+    --secondary-color: #FFFFFF;
+    --card-background: #F6F2EF;
+}
+
 body {
     margin: 0;
 }
 
 /* Header */
 header {
-    background-color: #D21034;
+    background-color: var(--primary-color);
     text-align: center;
-    color: #FFFFFF;
+    color: var(--secondary-color);
     padding: 0.5rem;
 }
 
@@ -75,7 +81,7 @@ main img {
 /* Footer */
 
 footer {
-    background-color: #D21034;
+    background-color: var(--primary-color);
     text-align: center;
     margin: 0;
 }
@@ -83,7 +89,7 @@ footer {
 footer p {
     margin: 0;
     padding: 0.5rem;
-    color: #FFFFFF;
+    color: var(--secondary-color);
 }
 
 /* Media Query */
@@ -104,7 +110,7 @@ footer p {
         left: 2rem;
         width: 25%;
         max-width: 300px;
-        background-color: #F6F2EF;
+        background-color: var(--card-background);
     }
 
     .weather {
@@ -113,6 +119,6 @@ footer p {
         right: 2rem;
         width: 25%;
         max-width: 300px;
-        background-color: #F6F2EF;
+        background-color: var(--card-background);
     }
 }
