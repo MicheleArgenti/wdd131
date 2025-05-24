@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place - Michele Argenti</title>
+    <meta name="description" content="WDD 131 - Place web page">
+    <meta name="author" content="Michele Argenti">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Italy</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/italy.webp" media="(min-width: 768px)" type="image/webp">
+            <img src="images/italy-small.webp" srcset="images/italy-small.webp" alt="Italy landscape">
+        </picture>
+        <div class="data">
+            <h2>Data</h2>
+            <b>Area: </b><span>301,340 km2</span>
+            <b>Population: </b><span>58,947,905</span>
+            <b>Capital: </b><span>Venice</span>
+            <b>Languages: </b><span>Italian</span>
+            <b>Curency: </b><span>Euro</span>
+            <b>Time Zone: </b><span>UTC +2</span>
+            <b>Calling Code: </b><span>+39</span>
+            <b>internet TDL: </b><span>.it</span>
+        </div>
+        <div class="weather">
+            <div class="title">
+                <h2>Weather</h2>
+                <img src="images/sun.webp" alt="Sun">
+            </div>
+            <b>Temperature: </b><span>30° C</span>
+            <b>Conditions: </b><span>Sunny</span>
+            <b>Wind: </b><span>2km/h</span>
+            <b>Wind Chill: </b><span>5.7° C</span>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 😎 Michele Argenti 😎 Italy</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
