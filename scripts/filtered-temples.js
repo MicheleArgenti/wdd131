@@ -68,7 +68,7 @@ const temples = [
     {
         templeName: "Rome Italy Temple",
         location: "Rome, italy",
-        dedicated: "210, October, 23",
+        dedicated: "2010, October, 23",
         area: 41010,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
@@ -91,9 +91,45 @@ const temples = [
     }
 ];
 
-function displayTemples() {
+displayTemples(temples);
+
+// All filter
+const allTemple = document.querySelector('#all');
+allTemple.addEventListener("click", () => {
+    displayTemples(temples);
+});
+
+// Old filter
+const oldTemple = document.querySelector('#old');
+oldTemple.addEventListener("click", () => {
+    displayTemples(temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) < 1900));
+});
+
+// New filter
+const newTemple = document.querySelector('#new');
+newTemple.addEventListener("click", () => {
+    displayTemples(temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) > 2000));
+});
+
+// Lerge filter
+const largeTemple = document.querySelector('#large');
+largeTemple.addEventListener("click", () => {
+    displayTemples(temples.filter(temple => temple.area > 90000));
+});
+
+// Small filter
+const smallTemple = document.querySelector('#small');
+smallTemple.addEventListener("click", () => {
+    displayTemples(temples.filter(temple => temple.area < 10000));
+});
+
+// Function to display the temples
+function displayTemples(filteredTemples) {
     let main = document.querySelector('main');
-    temples.forEach(temple => {
+    main.innerHTML = `
+    <h2>Home</h2>
+    `;
+    filteredTemples.forEach(temple => {
         let div = document.createElement('div');
         div.className = "card-temple";
         div.innerHTML = `
@@ -106,5 +142,3 @@ function displayTemples() {
         main.appendChild(div);
     });
 }
-
-displayTemples();
