@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Form - Michele Argenti</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals | Michele Argenti | Dynamic Web Fundamentals Form">
+    <meta name="author" content="Michele Argenti">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label for="productName">Product Name *</label>
+            <select name="productName" id="productName" required>
+                <option value="">Select a Product...</option>
+            </select>
+
+            <p>Overall Rating *</p>
+            <div>
+                <input type="radio" id="rating1" name="rating" value="1">
+                <label for="rating1">☆</label>
+                <input type="radio" id="rating2" name="rating" value="2">
+                <label for="rating1">☆☆</label>
+                <input type="radio" id="rating3" name="rating" value="3">
+                <label for="rating1">☆☆☆</label>
+                <input type="radio" id="rating4" name="rating" value="4">
+                <label for="rating1">☆☆☆☆</label>
+                <input type="radio" id="rating5" name="rating" value="5">
+                <label for="rating1">☆☆☆☆☆</label>
+            </div>
+
+            <label for="installationDate">Date of Installation</label>
+            <input type="date" id="installationDate" required>
+
+            <p>Which features did you find useful in the product?<br>(Check all that apply)</p>
+            <div>
+                <input type="checkbox" name="durability" id="feature1" value="Durability">
+                <label for="feature1"> Durability</label><br>
+                <input type="checkbox" name="easeOfUse" id="feature2" value="Ease of use">
+                <label for="feature2"> Ease of use</label><br>
+                <input type="checkbox" name="performance" id="feature3" value="Performance">
+                <label for="feature3"> Performance</label><br>
+                <input type="checkbox" name="design" id="feature4" value="Design">
+                <label for="feature4"> Design</label><br>
+            </div>
+
+            <label for="reviewText">Written Review</label>
+            <textarea id="reviewText" name="reviewText" rows="5"></textarea>
+
+            <label for="userName">Your Name</label>
+            <input type="text" id="userName" name="userName">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 😎 Michele Argenti 😎 Italy</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
