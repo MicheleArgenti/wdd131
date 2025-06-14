@@ -1,0 +1,253 @@
+/* General Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary: #C44359;
+    --secondary: #3AD3D8;
+    --accent1: #86C871;
+    --accent2: #CE5B2F;
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: auto;
+    font-family: var(--primary-font);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Style */
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+header img {
+    width: 250px;
+    height: auto;
+}
+
+header .nav-menu {
+    justify-self: center;
+}
+
+header .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+header .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s;
+}
+
+header .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+header .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+header .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+header nav {
+    display: none;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+header nav a {
+    color: var(--text);
+    padding: 0.5rem;
+    text-decoration: none;
+    margin: 0 1rem 0 1rem;
+}
+
+header nav a:hover {
+    background-color: var(--accent1);
+}
+
+header nav.active {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Main Style */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+.hero img {
+    width: 60%;
+    height: auto;
+}
+
+.index {
+    display: grid;
+    justify-items: center;
+}
+
+.index h2 {
+    grid-column: -1 / 1;
+}
+
+.index-cards {
+    padding: 0.5rem;
+}
+
+.index-cards img {
+    width: 250px;
+    height: auto;
+}
+
+.index-cards p {
+    text-align: center;
+}
+
+.main-fishes {
+    display: grid;
+    justify-items: center;
+}
+
+.main-fishes h1 {
+    grid-column: -1 / 1;
+}
+
+.fishes {
+    display: grid;
+    padding: 0.5rem
+}
+
+.fishes-card {
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    place-items: center;
+}
+
+.fishes-card h2 {
+    text-align: center;
+}
+
+.fishes-card img {
+    width: 250px;
+    display: block;
+}
+
+.fishes-card p {
+    display: block;
+}
+
+.contact {
+    display: grid;
+}
+
+.contact h1 {
+    justify-self: center;
+}
+
+form {
+    width: 50%;
+    display: grid;
+    justify-self: center;
+    padding: 0.5rem;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+form * {
+    padding: 0.5rem;
+}
+
+#submit {
+    margin-top: 0.5rem;
+}
+
+#reviewSummary {
+    text-align: center;
+}
+
+/* Footer Style */
+
+footer {
+    background-color: var(--primary);
+    display: grid;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    place-content: center;
+}
+
+footer section {
+    justify-self: center;
+    align-self: center;
+}
+
+footer section a {
+    text-decoration: none;
+}
+
+footer section a img {
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+}
+
+/* Media Query Style */
+
+@media screen and (min-width: 1200px) {
+    body {
+        width: 80%;
+    }
+
+    header .hamburger {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .index {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .fishes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
